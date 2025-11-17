@@ -1,0 +1,71 @@
+
+
+        @font-face{
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot");
+
+    src: url("../fonts/Vazir.eot?#iefix") format('embedded-opentype'),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff")format("woff") ,
+    url("../fonts/Vazir.ttf") format("truetype");
+}
+body { font-family: 'Vazir', sans-serif; background-color: #fff8f0; margin: 0; padding: 0; overflow-x: hidden;
+background: linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(255,230,230,0.85)); 
+}
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+.bgnav { background-color: rgb(185, 38, 38); color: white; position: fixed; top:0; width: 100%; z-index: 1000; }
+.navbar a { color: white; font-weight: 600; }
+.navbar a:hover { background-color: rgba(255,255,255,0.2);color: white; border-radius: 5px; }
+
+/* بخش تیم */
+.team-section { 
+    
+    padding: 120px 20px 80px 20px; 
+    margin-top: 70px; 
+}
+.team-section h2 { font-size: 2.8rem; color: #b32d2d; font-weight: bold; margin-bottom: 10px; text-align:center; }
+.team-section p.section-description { 
+    color: #555; font-size: 1.1rem; line-height: 1.6; text-align:center; margin-bottom: 50px; 
+    max-width: 900px; margin-left:auto; margin-right:auto;
+}
+.section-subtitle { font-size: 1.5rem; color: #b32d2d; font-weight: 600; margin:60px 0 30px; text-align:center; }
+.team-card { 
+  background: #fff; border-radius: 20px; padding: 20px 15px; 
+  text-align:center; box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+  transition: transform 0.5s, box-shadow 0.5s; cursor:pointer; 
+  position:relative; 
+}
+.team-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 25px 40px rgba(0,0,0,0.3); }
+.team-card img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 15px; transition: transform 0.5s; }
+.team-card:hover img { transform: scale(1.1) rotate(-2deg); }
+.team-card h4 { font-size:1.4rem; color:#ff4d4d; margin-bottom:5px; }
+.team-card h5 { font-size:1rem; color:#555; margin-bottom:10px; }
+.team-card p { font-size:0.95rem; line-height:1.5; color:#555; }
+
+/* آیکون شبکه‌های اجتماعی */
+.social-icons {
+  margin-top: 15px;
+}
+.social-icons a {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background-color: #b32d2d;
+  color: white;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.1);
+}
+@media (max-width:768px){ .team-card img { width:120px; height:120px; } }
+
+/* Footer */
+footer { background-color:#b32d2d; color:white; padding:30px 20px; text-align:center; }
+footer a { color:white; text-decoration:none; }
+footer a:hover { text-decoration:underline; }

@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mali4.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&family=Shabnam&family=Sahel&family=Tajawal&family=Goudy+Old+Style&family=Harlow+Solid+Italic&family=Kristen+ITC&family=Lucida+Sans&family=Jokerman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+   <style>
+    
+      body {
+            font-family: 'Tahoma', sans-serif;
+            
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        /* تمام لینک‌ها هنگام هاور سفید می‌شوند */
+a:hover {
+  color: white !important;
+  text-decoration: none; /* اگر می‌خوای زیرخط هم نداشته باشد */
+}
+
+
+        
+
+        /* هدر */
+       
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+        /* لایه تصویر داخل کارت */
+.product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* متن overlay روی تصویر */
+.product-img-wrapper .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6); /* لایه نیمه شفاف */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* افکت هاور روی تصویر */
+.product-img-wrapper:hover img {
+    transform: scale(1.2); /* زوم تصویر */
+}
+
+.product-img-wrapper:hover .overlay {
+    opacity: 1; /* متن ظاهر شود */
+}
+
+/* افکت هاور روی کل کارت */
+.card.product-card {
+    transition: transform 0.4s, box-shadow 0.4s;
+    border-radius: 12px;
+}
+
+.card.product-card:hover {
+    transform: translateY(-10px) scale(1.03); /* کمی بالاتر و بزرگتر شدن کارت */
+    box-shadow: 0 15px 25px rgba(239, 90, 90, 0.7); /* سایه بزرگتر و جذاب‌تر */
+}
+
+
+
+
+        .product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* لایه متن روی عکس */
+.product-img-wrapper .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6); /* رنگ نیمه شفاف */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* افکت هاور */
+.product-img-wrapper:hover img {
+    transform: scale(1.2); /* زوم تصویر */
+}
+
+.product-img-wrapper:hover .overlay {
+    opacity: 1; /* متن ظاهر می‌شود */
+}
+
+
+        /* بخش ویژگی‌ها */
+        .features {
+            background-color: #fce5e1;
+            padding: 60px 20px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-item i {
+            font-size: 50px;
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        /* بخش نظرات */
+        .reviews {
+            background-color: #fff0f5;
+            padding: 60px 20px;
+        }
+        .review-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .review-card:hover {
+            transform: translateY(-8px);
+        }
+
+
+        /* انیمیشن ها */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @font-face{
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot");
+
+    src: url("../fonts/Vazir.eot?#iefix") format('embedded-opentype'),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff")format("woff") ,
+    url("../fonts/Vazir.ttf") format("truetype");
+}
+    .bgnav{
+        background-color: rgb(179, 40, 40);
+        color: white;
+        
+    }
+    nav a{
+        color: white;
+    }
+    .bgnav :hover{
+        color: white;
+    }
+    .nav-item a{
+        color: white;
+    }
+    .nav-item a:hover{
+        color: white;
+        background-color: rgba(255, 251, 251, 0.635);
+    }
+   
+
+/* Navbar */
+.bgnav{
+    /* background: linear-gradient(90deg, #b84141, #ff6767); */
+    background-color: rgb(185, 38, 38);
+}
+.navbar a{
+    color:white;
+    font-weight:600;
+}
+.navbar a:hover{
+    background-color: rgba(255,255,255,0.2);
+    border-radius:5px;
+}
+.navbar-brand{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+}
+
+/* Hero Section */
+.hero{
+    position:relative;
+    /* background-image: url('hero-bg.jpg'); */
+    background-color: white;
+    background-size:cover;
+    background-attachment:fixed; /* Parallax effect */
+    background-position:center;
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(182, 42, 42);
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero h1{
+    font-family:'Poppins', sans-serif;
+    font-size:52px;
+    font-weight:700;
+    animation: floatText 6s ease-in-out infinite;
+}
+
+.hero p{
+    font-size:26px;
+    margin-top:15px;
+    animation: floatText 8s ease-in-out infinite alternate;
+}
+
+.hero .btn{
+    margin-top:25px;
+    font-size:22px;
+    padding:15px 35px;
+    border-radius:50px;
+    animation: pulseBtn 2s infinite;
+    transition: all 0.3s ease;
+}
+.hero .btn:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(205, 13, 13, 0.8);
+}
+
+/* Animations */
+@keyframes floatText{
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulseBtn{
+    0% { transform: scale(1); box-shadow:0 0 10px #ff6767; }
+    50% { transform: scale(1.1); box-shadow:0 0 25px #ff6767; }
+    100% { transform: scale(1); box-shadow:0 0 10px #ff6767; }
+}
+
+.overlay a{
+    text-decoration: none;
+    
+}
+/* Footer */
+footer{
+   
+     background-color:#b32d2d;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+footer a{
+    color:white;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+
+
+
+
+
+
+        /* هدر */
+        .hero {
+             /* background: linear-gradient(135deg, #e63946, #f70000);  */
+             height: 100vh;
+              background: 
+              linear-gradient(rgba(255, 255, 255, 0.199)),
+             url('./img/download (4).webp') top center / cover no-repeat;
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+/* لایه متن روی عکس */
+.product-img-wrapper .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6); /* رنگ نیمه شفاف */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* افکت هاور */
+.product-img-wrapper:hover img {
+    transform: scale(1.2); /* زوم تصویر */
+}
+
+.product-img-wrapper:hover .overlay {
+    opacity: 1; /* متن ظاهر می‌شود */
+}
+
+
+        /* بخش ویژگی‌ها */
+        .features {
+            background-color: #fce5e1;
+            padding: 60px 20px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-item i {
+            font-size: 50px;
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        /* بخش نظرات */
+        .reviews {
+            background-color: #fff0f5;
+            padding: 60px 20px;
+        }
+        .review-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .review-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* فوتر */
+        .footer {
+            background-color: #2a1a2b;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 40px;
+        }
+
+        /* انیمیشن ها */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+/* انیمیشن کارت‌های دسته‌ای */
+@keyframes fadeSlideScale {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.category-products .product-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeSlideScale 0.6s forwards;
+}
+
+/* افکت موس روی کارت */
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 4px 8px 15px rgba(239,90,90,0.7);
+}
+
+
+        /* هدر */
+        .hero {
+             /* background: linear-gradient(135deg, #e63946, #f70000);  */
+             height: 100vh;
+              background: 
+              linear-gradient(rgba(255, 255, 255, 0.199)),
+             url('./photo1/thumb-1920-1240169.jpg') top center / cover no-repeat;
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+/* لایه متن روی عکس */
+.product-img-wrapper .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 6, 6, 0.363); /* رنگ نیمه شفاف */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* افکت هاور */
+.product-img-wrapper:hover img {
+    transform: scale(1.2); /* زوم تصویر */
+}
+
+.product-img-wrapper:hover .overlay {
+    opacity: 1; /* متن ظاهر می‌شود */
+}
+
+
+        /* بخش ویژگی‌ها */
+        .features {
+            background-color: #fce5e1;
+            padding: 60px 20px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-item i {
+            font-size: 50px;
+            color: #e63946;
+            margin-bottom: 15px;
+        }
+
+        /* بخش نظرات */
+        .reviews {
+            background-color: #fff0f5;
+            padding: 60px 20px;
+        }
+        .review-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .review-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* فوتر */
+        .footer {
+            background-color: #2a1a2b;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 40px;
+        }
+
+        /* انیمیشن ها */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+/* انیمیشن کارت‌های دسته‌ای */
+@keyframes fadeSlideScale {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.category-products .product-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeSlideScale 0.6s forwards;
+}
+
+/* افکت موس روی کارت */
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 4px 8px 15px rgba(239,90,90,0.7);
+}
+    </style>
+<body>
+
+   
+
+    <nav class="navbar navbar-expand-sm  bgnav" style="position: fixed; width: 100%; z-index: 1;">
+  <div class="container-fluid">
+    <img src="download.webp" alt="" style="width: 50px;height: 50px; border-radius: 50px;"> <h5 class="fw-bold">Anar co</h5>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="mali1.html">صفحه اصلی </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mali2.html">درباره ما</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mali3.html">خدمات </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">نمونه کار ها</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="mali5.html">قیمت ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mali6.html">تیم ما</a>
+        </li>
+       
+      <li class="nav-item"><a class="nav-link" href="mali7.html">مقاله </a></li>
+                 <li class="nav-item"><a class="nav-link " href="mali9.html">مقاله تگ</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="mali8.html">تماس با ما</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+   <!-- هدر -->
+    <section class="hero">
+        <h1 class="animate__animated animate__fadeInDown  mt-5">به انار کو خوش آمدید</h1>
+        <p class="animate__animated animate__fadeInUp">انار کو با ارائه محصولات طبیعی و ارگانیک، بهترین انتخاب برای سلامتی و زندگی سالم شماست. از میوه‌های تازه گرفته تا نوشیدنی‌ها و محصولات زیبایی، هر چیزی که نیاز دارید در اینجا پیدا خواهید کرد.</p>
+    </section>
+
+    <!-- بخش معرفی ویژگی‌ها -->
+    <section class="features container my-5">
+        <div class="row g-4">
+            <div class="col-md-4 feature-item animate-on-scroll">
+                <i class="bi bi-award-fill"></i>
+                <h4>کیفیت برتر</h4>
+                <p>تمام محصولات ما از بهترین مزارع طبیعی انتخاب می‌شوند تا کیفیت و تازگی تضمین شود.</p>
+            </div>
+            <div class="col-md-4 feature-item animate-on-scroll">
+                <i class="bi bi-heart-fill"></i>
+                <h4>سلامتی شما</h4>
+                <p>محصولات ما سالم، ارگانیک و بدون مواد نگهدارنده هستند تا سبک زندگی سالم شما حفظ شود.</p>
+            </div>
+            <div class="col-md-4 feature-item animate-on-scroll" >
+                <i class="bi bi-box-seam"></i>
+                <h4>ارسال سریع</h4>
+                <p>سفارش خود را در کمترین زمان ممکن دریافت کنید، با بسته‌بندی ایمن و حرفه‌ای.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- محصولات -->
+
+  <section class="container my-5">
+  <h2 class="text-center mb-4 animate-on-scroll">محصولات ما</h2>
+ <!-- 🔹 لینک‌های دسته‌ها + لینک بازگشت -->
+<div class="d-flex justify-content-center align-items-center flex-wrap mb-4 gap-2">
+  <a href="#" class="category-link btn btn-outline-danger" data-category="میوه خشک">میوه خشک</a>
+  <a href="#" class="category-link btn btn-outline-danger" data-category="محصولات آرایشی">محصولات آرایشی</a>
+  <a href="#" class="category-link btn btn-outline-danger" data-category="انواع گوشت">انواع گوشت</a>
+  
+
+  <!-- 🔸 لینک بازگشت -->
+  <a href="#" id="back-link" class="btn btn btn-outline-danger d-none ms-2">
+    بازگشت به همه محصولات
+  </a>
+</div>
+
+<!-- 🔸 بخش محصولات دسته‌ای -->
+<div class="row g-4 d-none" id="category-products"></div>
+
+
+  <!-- 🔸 محصولات اصلی (۱۲ عدد) -->
+  <div class="row g-4" id="main-products">
+  <!-- محصول ۱ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./img/photo-1641291361624-38b69b86b1cf.avif" class="card-img-top" alt="انار تازه">
+      <div class="overlay">
+        <p>همین حالا خرید کنید و از دنیای خوشمزه تنقلات لذت ببرید!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalProduct1" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">تنقلات</h5>
+      <a href="#" class="btn btn-danger w-100"> خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال محصول ۱ -->
+<div class="modal fade" id="modalProduct1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <!-- هدر مودال با دکمه سمت چپ -->
+      <div class="modal-header d-flex justify-content-start align-items-center">
+        <button type="button" class="btn-close me-2" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title mb-0">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselProduct1" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/photo-1641291361624-38b69b86b1cf.avif" class="d-block w-100" alt="انار ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-1446521081-612x612.jpg" class="d-block w-100" alt="انار ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-609815010-612x612.jpg" class="d-block w-100" alt="انار ۳" style="height: 300px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <p>چه دنبال یک میان‌وعده سریع برای کودکان باشید، چه یک خوراکی انرژی‌زا برای روز کاری خود، ما بهترین گزینه‌ها را برای شما داریم. <br><b>همین حالا خرید کنید و از دنیای خوشمزه تنقلات لذت ببرید!</b></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۲ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/istockphoto-1729805246-612x612.jpg" class="card-img-top" alt="انار تازه">
+      <div class="overlay">
+        <p>تازه ترین و مرغوب ترین میوه خشک در فروشگاه انار کو بدست بیاورید</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalProduct2" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">میوه خشک</h5>
+      <a href="#" class="btn btn-danger w-100">خرید محصول </a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال محصول ۲ -->
+<div class="modal fade" id="modalProduct2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <!-- هدر مودال با دکمه سمت چپ -->
+      <div class="modal-header d-flex justify-content-start align-items-center">
+        <button type="button" class="btn-close me-2" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title mb-0">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselProduct2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/OIP (4).webp" class="d-block w-100" alt="انار ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-614730366-612x612.jpg" class="d-block w-100" alt="انار ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/photo-1702506183897-e4869f155209.avif" class="d-block w-100" alt="انار ۳" style="height: 300px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <h6>🌟 میوه‌های خشک طبیعی و خوشمزه، آماده برای شما! 🌟</h6>
+          <p>در فروشگاه ما، انواع میوه‌های خشک با طعم طبیعی و کیفیت تضمینی عرضه می‌شوند.<br><b>همین حالا خرید کنید و از طعم لذیذ و سالم میوه‌های خشک لذت ببرید!</b></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۳ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./img/OIP (3).webp" class="card-img-top" alt="حبوبات تازه">
+      <div class="overlay">
+        <p>🌟 حبوبات تازه و سالم، انرژی طبیعی برای روز شما! 🌟</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal3" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">حبوبات</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal3">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۳ -->
+<div class="modal fade" id="myModal3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-start align-items-center">
+        <button type="button" class="btn-close me-2" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title mb-0">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselProduct3" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/OIP (4).webp" class="d-block w-100" alt="حبوبات ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/download.webp" class="d-block w-100" alt="حبوبات ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/OIP (3).webp" class="d-block w-100" alt="حبوبات ۳" style="height: 300px;">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct3" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <p>🌱 حبوبات سالم و طبیعی، منبع انرژی و پروتئین! 🌱 <br>
+          در فروشگاه ما، حبوبات با کیفیت بالا، تازه و بدون افزودنی شیمیایی عرضه می‌شوند. چه دنبال یک غذای سریع و مقوی باشید و چه بخواهید وعده‌های سالم برای خانواده آماده کنید، حبوبات بهترین گزینه هستند.</p>
+          <h6>همین حالا حبوبات تازه و سالم ما را امتحان کنید و از طعم طبیعی و کیفیت تضمینی لذت ببرید! 🛒</h6>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۴ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/OIF.webp" class="card-img-top" alt="لبنیات تازه">
+      <div class="overlay">
+        <p>🥛 لبنیات تازه و سالم، طعم طبیعی هر روز شما!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal4" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">لبنیات تازه</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal4">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۴ -->
+<div class="modal fade" id="myModal4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-start align-items-center">
+        <button type="button" class="btn-close me-2" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title mb-0">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselProduct4" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/a-basket-full-of-eggs-o84.png" class="d-block w-100" alt="لبنیات ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/OIF.webp" class="d-block w-100" alt="لبنیات ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/OIP (2).webp" class="d-block w-100" alt="لبنیات ۳" style="height: 300px;">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct4" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct4" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <p>🥛 لبنیات تازه و سالم ما، شامل شیر، ماست و پنیر با کیفیت بالا، منبع پروتئین و کلسیم طبیعی هستند. با طعم تازه و کیفیت تضمینی، انرژی لازم برای روز شما را فراهم می‌کنند و تجربه‌ای سالم و خوشمزه برای خانواده به ارمغان می‌آورند.🥛</p>
+          <h6>همین حالا خرید کنید و از طعم طبیعی و فواید لبنیات تازه لذت ببرید! 🥛</h6>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- محصول۵ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./img/photo-1702506183897-e4869f155209.avif" class="card-img-top" alt="انار تازه">
+      <div class="overlay">
+        <p> میوه‌های خشک طبیعی و خوشمزه، آماده برای شما!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal1" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">خشکبار</h5>
+      <a href="#" class="btn btn-danger w-100">خرید محصول</a>
+    </div>
+  </div>
+</div>
+<!-- مودال۵ -->
+<div class="modal fade" id="myModal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">معرفی محصولات</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/OIP (4).webp" class="d-block w-100" alt="انار ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-614730366-612x612.jpg" class="d-block w-100" alt="انار ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/photo-1702506183897-e4869f155209.avif" class="d-block w-100" alt="انار ۳" style="height: 300px;">
+            </div>
+          </div>
+
+          <!-- دکمه‌ها -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <!-- توضیحات محصول -->
+        <div class="mt-3">
+          <h6>🌟 میوه‌های خشک طبیعی و خوشمزه، آماده برای شما! 🌟</h6>
+          <p>در فروشگاه ما، انواع میوه‌های خشک با طعم طبیعی و کیفیت تضمینی عرضه می‌شوند.<br><b>همین حالا خرید کنید و از طعم لذیذ و سالم میوه‌های خشک لذت ببرید!</b></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- محصول ۶ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/OIP (5).webp" class="card-img-top" alt="دوبی شکلات">
+      <div class="overlay">
+        <p>دوبی شکلات، طعم لوکس و خوشمزه برای لحظات شیرین شما!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal6" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">دوبی شکلات</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal6">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۶ -->
+<div class="modal fade" id="myModal6" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- هدر مودال با دکمه سمت چپ و عنوان سمت راست -->
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselProduct6" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/OIP (10).webp" class="d-block w-100" alt="شکلات ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/OIP (6).webp" class="d-block w-100" alt="شکلات ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/OIP (8).webp" class="d-block w-100" alt="شکلات ۳" style="height: 300px;">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct6" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct6" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <p>🍫 دوبی شکلات با کیفیت عالی و طعم منحصر به فرد، انتخابی ایده‌آل برای دوستداران شیرینی است. هر تکه شکلات با مواد تازه و مرغوب تهیه شده و طعمی بی‌نظیر و لذت‌بخش دارد. چه برای میان‌وعده، هدیه یا لحظات خاص، دوبی شکلات تجربه‌ای شیرین و لوکس را به شما هدیه می‌دهد.<br>
+          <b>همین حالا خرید کنید و از طعم خوشمزه و کیفیت تضمینی آن لذت ببرید!</b></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۷ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/OIP (12).webp" class="card-img-top" alt="ادویه‌جات">
+      <div class="overlay">
+        <p>🌿 ادویه‌جات تازه و معطر، طعم واقعی غذاهای شما!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal7" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">ادویه‌جات</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal7">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۷ -->
+<div class="modal fade" id="myModal7" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- هدر مودال با دکمه سمت چپ و عنوان سمت راست -->
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselProduct7" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/OIP (13).webp" class="d-block w-100" alt="ادویه ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/download (3).webp" class="d-block w-100" alt="ادویه ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/download (2).webp" class="d-block w-100" alt="ادویه ۳" style="height: 300px;">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct7" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct7" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <h6>🌿 ادویه‌جات تازه و معطر، طعم واقعی غذاهای شما!</h6>
+          <p>ادویه‌جات ما با کیفیت بالا و تازگی کامل، هر وعده غذایی شما را خوش‌طعم و خوش‌عطر می‌کنند. از زعفران و فلفل گرفته تا هل و دارچین، همه محصولات طبیعی و بدون افزودنی هستند. با استفاده از ادویه‌جات فروشگاه ما، طعم و عطر بی‌نظیری به غذاهای خود اضافه کنید و تجربه‌ای لذت‌بخش و سالم داشته باشید.<br>
+          <b>همین حالا خرید کنید و آشپزی خود را به سطحی تازه و خوشمزه ارتقا دهید!</b></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۸ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/OIP (3).webp" class="card-img-top" alt="ماکادیمیا">
+      <div class="overlay">
+        <p>🌰 ماکادیمیا، مغزی لوکس با طعم نرم و کرمی!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal8" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title mt-3">ماکادیمیا</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal8">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۸ -->
+<div class="modal fade" id="myModal8" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselExample8" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/OIP (16).webp" class="d-block w-100" alt="ماکادیمیا ۱" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/download (4).webp" class="d-block w-100" alt="ماکادیمیا ۲" style="height: 300px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/OIP (3).webp" class="d-block w-100" alt="ماکادیمیا ۳" style="height: 300px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample8" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample8" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <p>ماکادیمیا یکی از مغزهای گران‌قیمت و ارزشمند جهان است که با طعم کرمی، نرم و خوشایند خود محبوبیت زیادی دارد.
+          این مغز خوش‌طعم سرشار از ویتامین‌ها، آنتی‌اکسیدان‌ها و چربی‌های مفید برای قلب است و به سلامت پوست و مو نیز کمک می‌کند.</p>
+          <h6>🥥 یک میان‌وعده‌ی سالم و مجلل برای هر لحظه از روز!<br>
+             <b>همین حالا خرید کنید و از طعم بی‌نظیر و کیفیت ممتاز ماکادیمیا لذت ببرید.</b></h6>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۹ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/OIP (10).webp" class="card-img-top" alt="شیرینی تازه">
+      <div class="overlay">
+        <p>🍰 انواع شیرینی تازه و خوش‌طعم برای هر سلیقه و هر مناسبت!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal9" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">شیرینی‌های تازه</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal9">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۹ -->
+<div class="modal fade" id="myModal9" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+
+      <div class="modal-body">
+        <div id="carouselExample9" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/istockphoto-1368962398-612x612.jpg" class="d-block w-100" alt="شیرینی ۱" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-1184180166-612x612.jpg" class="d-block w-100" alt="شیرینی ۲" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-2234155878-612x612.jpg" class="d-block w-100" alt="شیرینی ۳" style="height: 350px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample9" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample9" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+
+        <div class="mt-3">
+          <h6>🎀 طعم شیرینی‌های ما، شادی و انرژی را به روزتان می‌بخشد!</h6>
+          <p>🍪 انواع شیرینی‌های خوشمزه و باکیفیت ما با ترکیبی از طعم، تازگی و زیبایی تهیه شده‌اند تا لحظات شما را شیرین‌تر کنند.
+          از شیرینی‌های سنتی گرفته تا انواع مدرن و خامه‌ای، هر کدام با دقت و عشق آماده شده‌اند تا تجربه‌ای خاص و لذت‌بخش برای شما رقم بزنند.
+          <br><b>همین حالا خرید کنید و از طعم بی‌نظیر و شیرین فروشگاه ما لذت ببرید!</b></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- محصول ۱۰ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/istockphoto-1824340185-612x612.jpg" class="card-img-top" alt="انواع نوشیدنی ها">
+      <div class="overlay">
+        <p>از دمنوش‌های آرام‌بخش تا آبمیوه‌های پرانرژی — همه در یک جا!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal10" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">انواع نوشیدنی‌ها</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal10">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۱۰ -->
+<div class="modal fade" id="myModal10" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample10" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/istockphoto-2017575304-612x612.jpg" class="d-block w-100" alt="نوشیدنی ۱" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-2166845199-612x612.jpg" class="d-block w-100" alt="نوشیدنی ۲" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-2230840321-612x612.jpg" class="d-block w-100" alt="نوشیدنی ۳" style="height: 350px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample10" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample10" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+        <div class="mt-3">
+          <p>طراوت و انرژی را با انواع نوشیدنی‌های طبیعی، خنک و خوش‌طعم ما تجربه کنید؛ از آبمیوه‌های تازه تا دمنوش‌های آرام‌بخش و نوشابه‌های گوارا، هر جرعه‌اش حس تازگی می‌بخشد!</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۱۱ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./photo1/istockphoto-2208803520-612x612.jpg" class="card-img-top" alt="انواع لباس ها">
+      <div class="overlay">
+        <p>کالای باکیفیت، قیمت مناسب، انتخاب هوشمندانه!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal11" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">انواع لباس‌ها</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal11">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۱۱ -->
+<div class="modal fade" id="myModal11" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample11" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/istockphoto-2208805016-612x612.jpg" class="d-block w-100" alt="لباس ۱" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-852439662-612x612.jpg" class="d-block w-100" alt="لباس ۲" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-1023612090-612x612.jpg" class="d-block w-100" alt="لباس ۳" style="height: 350px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample11" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample11" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+        <div class="mt-3">
+          <p>در فروشگاه ما، مجموعه‌ای کامل از انواع کالاهای باکیفیت را خواهید یافت؛ از مواد خوراکی و نوشیدنی گرفته تا محصولات بهداشتی و خانگی، همه در یک‌جا برای راحتی شما گردآوری شده‌اند.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- محصول ۱۲ -->
+<div class="col-md-3 animate-on-scroll">
+  <div class="card product-card" style="box-shadow:2px 2px 2px 1px rgba(239,90,90,0.65);">
+    <div class="product-img-wrapper">
+      <img src="./img/photo-1557205465-f3762edea6d3.avif" class="card-img-top" alt="لوازم آرایشی بهداشتی">
+      <div class="overlay">
+        <p>🌸 زیبایی شما، اولویت ماست!</p>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#myModal12" class="text-light">موارد بیشتر..🔗</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">لوازم آرایشی و بهداشتی</h5>
+      <a href="#" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#myModal12">خرید محصول</a>
+    </div>
+  </div>
+</div>
+
+<!-- مودال ۱۲ -->
+<div class="modal fade" id="myModal12" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h4 class="modal-title text-end">معرفی محصولات</h4>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample12" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo1/istockphoto-1408439145-612x612.jpg" class="d-block w-100" alt="محصول ۱" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-2166413052-612x612.jpg" class="d-block w-100" alt="محصول ۲" style="height: 350px;">
+            </div>
+            <div class="carousel-item">
+              <img src="./photo1/istockphoto-2163326304-612x612.jpg" class="d-block w-100" alt="محصول ۳" style="height: 350px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample12" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample12" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
+        </div>
+        <div class="mt-3">
+          <p>در فروشگاه ما انواع محصولات آرایشی با کیفیت و برندهای معتبر موجود است. از رژ لب و کرم‌ها گرفته تا لوازم مراقبت از پوست و مو، همه چیز برای جلوه‌ای تازه و جذاب آماده است. با استفاده از محصولات ما، به ظاهری دلنشین و اعتماد به نفس بالا دست پیدا کنید و هر روز خود را با زیبایی طبیعی‌تان بدرخشید!</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+   
+
+
+</section>
+
+
+    <!-- بخش نظرات مشتریان -->
+    <section class="reviews container my-5">
+        <h2 class="text-center mb-4 animate-on-scroll">نظرات مشتریان</h2>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll">
+                <div class="review-card">
+                    <p>"محصولات انار کو همیشه تازه و خوشمزه هستند. کیفیت فوق‌العاده!"</p>
+                    <h6>-لیلا پوپل</h6>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="review-card">
+                    <p>"عصاره انار برای سلامتی من عالی است. بسته‌بندی بسیار خوب و ارسال سریع."</p>
+                    <h6>-ارسلان  طوطاخیل</h6>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="review-card">
+                    <p>«من همیشه از خرید از این فروشگاه لذت می‌برم! تنوع محصولات، کیفیت بالای میوه‌ها، شیرینی‌ها و حتی لوازم آرایشی باعث شده هر بار تجربه‌ای خوشایند داشته باشم.</p>
+                    <h6>احمد ارغندیوال-</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Anar Co. تمامی حقوق محفوظ است.</p>
+    <p>تماس با ما: <a href="mailto:info@anarco.com">info@anarco.com</a></p>
+</footer>
+
+<!-- 🔹 اسکریپت کامل -->
+<script>
+  // 🌟 انیمیشن هنگام اسکرول
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.85;
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < triggerBottom) el.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility);
+
+  // 🌟 متغیرهای اصلی
+  const categorySection = document.getElementById("category-products");
+  const backLink = document.getElementById("back-link");
+  const mainProducts = document.getElementById("main-products"); // بخش اصلی محصولات
+  const categoryLinks = document.querySelectorAll(".category-link");
+
+  // 🌟 داده‌های دسته‌ها
+  const categoryCards = {
+    "میوه خشک": [
+      { title: "سیب خشک", img: "./photo1/istockphoto-609815010-612x612.jpg", desc: "میوه خشک ۱ با کیفیت عالی." },
+      { title: "خرما", img: "./photo1/khorma.webp", desc: "خرما تازه لذیذ " },
+      { title: "ماکادیمیا", img: "./photo1/OIP (3).webp", desc: "طعم کرمی و لذیذ" },
+      { title: "طعم های جدید", img: "./photo1/istockphoto-2223571954-612x612.jpg", desc: "میوه های خشک با طعم های مختلف." }
+    ],
+    "محصولات آرایشی": [
+      { title: "انواع لوازم بهداشتی", img: "./photo1/istockphoto-1546442230-612x612.jpg", desc: "محصول بهداشتی با کیفیت بالا." },
+      { title: "انواع لوازم آرایشی", img: "./photo1/OIP (1).webp", desc: "محصول آرایشی با کیفیت بالا." }
+    ],
+    "انواع گوشت": [
+      { title: "گوشت گوسفند", img: "./photo1/istockphoto-1067703434-612x612.jpg", desc: "گوشت تازه و با کیفیت" },
+      { title: "محصولات دریایی", img: "./photo1/istockphoto-520490716-612x612.jpg", desc: "محصولات تازه از دل دریا" },
+      { title: "گوشت مرغ", img: "./photo1/istockphoto-1443957103-612x612.jpg", desc: "گوشت تازه و با کیفیت" },
+      { title: "گوشت دل جیگر", img: "./photo1/istockphoto-2185115224-612x612.jpg", desc: "گوشت تازه و با کیفیت" },
+      { title: "انواع کالباس‌ها", img: "./photo1/istockphoto-157605680-612x612.jpg", desc: "انواع کالباس‌ها و ساسیج‌های تازه مرغوب" }
+    ]
+  };
+
+  // 🌟 تابع نمایش دسته‌ها
+  function showCategory(categoryName) {
+    if (!categoryCards[categoryName]) return;
+
+    mainProducts.classList.add("d-none");
+    categorySection.classList.remove("d-none");
+    backLink.classList.remove("d-none");
+    categorySection.innerHTML = "";
+
+    categoryCards[categoryName].forEach((item) => {
+      const div = document.createElement("div");
+      div.classList.add("col-md-3", "animate-on-scroll");
+      div.innerHTML = `
+        <div class="card product-card">
+          <div class="product-img-wrapper">
+            <img src="${item.img}" class="card-img-top" alt="${item.title}">
+            <div class="overlay"><p>${item.desc}</p></div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+            <a href="#" class="btn btn-danger w-100">خرید محصول</a>
+          </div>
+        </div>
+      `;
+      categorySection.appendChild(div);
+      setTimeout(() => div.classList.add("visible"), 50);
+    });
+  }
+
+  // 🌟 کلیک روی لینک‌های دسته‌ها
+  categoryLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const categoryName = link.dataset.category;
+      if (categoryName === "همه محصولات") {
+        categorySection.classList.add("d-none");
+        mainProducts.classList.remove("d-none");
+        backLink.classList.add("d-none");
+      } else {
+        showCategory(categoryName);
+      }
+    });
+  });
+
+  // 🌟 عملکرد لینک بازگشت
+  backLink.addEventListener("click", e => {
+    e.preventDefault();
+    categorySection.classList.add("d-none");
+    mainProducts.classList.remove("d-none");
+    backLink.classList.add("d-none");
+  });
+</script>
+
+<!-- مادل -->
+
+ <script>
+var carousel1 = document.querySelector('#carouselExample1');
+var bsCarousel1 = new bootstrap.Carousel(carousel1, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+var carousel2 = document.querySelector('#carouselExample2');
+var bsCarousel2 = new bootstrap.Carousel(carousel2, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+
+// اضافه کردن Carousel سوم
+var carousel3 = document.querySelector('#carouselExample3');
+var bsCarousel3 = new bootstrap.Carousel(carousel3, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+// اضافه کردن Carousel جهارم
+var carousel4 = document.querySelector('#carouselExample4');
+var bsCarousel4 = new bootstrap.Carousel(carousel4, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+// اضافه کردن Carousel 6
+var carousel6 = document.querySelector('#carouselExample6');
+var bsCarousel6 = new bootstrap.Carousel(carousel6, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+// اضافه کردن Carousel 7
+var carousel7 = document.querySelector('#carouselExample7');
+var bsCarousel7 = new bootstrap.Carousel(carousel7, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+// اضافه کردن Carousel 8
+var carousel8 = document.querySelector('#carouselExample8');
+var bsCarousel8 = new bootstrap.Carousel(carousel8, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+// اضافه کردن Carousel ۹
+var carousel9 = document.querySelector('#carouselExample9');
+var bsCarousel9 = new bootstrap.Carousel(carousel9, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+
+// اضافه کردن Carousel 10
+var carousel10 = document.querySelector('#carouselExample10');
+var bsCarousel10 = new bootstrap.Carousel(carousel10, {
+  interval: 2000,
+  ride: 'carousel'
+});
+// 11
+var carousel11 = document.querySelector('#carouselExample11');
+var bsCarousel11 = new bootstrap.Carousel(carousel11, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+// 12
+var carousel12 = document.querySelector('#carouselExample12');
+var bsCarousel12 = new bootstrap.Carousel(carousel12, {
+  interval: 2000,
+  ride: 'carousel'
+});
+
+</script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

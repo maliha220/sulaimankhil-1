@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تماس با ما — فروشگاه انار کو</title>
+<link rel="stylesheet" href="./css/mali8.css">
+  <!-- فونت فارسی و آیکون -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Bootstrap -->
+<link rel="stylesheet" href="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazir&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+     .hero-bg{
+      margin-top:0; /* فاصله صفر شد */
+      position:relative;
+      min-height:92vh;
+      display:flex;align-items:center;justify-content:center;
+      color:var(--text);
+      overflow:hidden;
+      background-image: url('./photo1/istockphoto-2192524721-612x612.jpg');
+      background-size:cover;background-position:center center;
+    }
+    
+    .hero-bg::before{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(17,6,6,0.35), rgba(249,90,90,0.55));
+      mix-blend-mode:multiply;pointer-events:none;
+    }
+    .hero-bg[data-parallax="true"]{background-attachment:fixed}
+
+    .container{width:95%;max-width:1200px;margin:0 auto}
+</style>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bgnav" style="position: fixed;">
+    <div class="container-fluid">
+      
+        <img src="download.webp" alt="" style="width:50px;height:50px;border-radius:50px;">
+       <h5 class="fw-bold"> Anar Co</h5>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="mali1.html">صفحه اصلی</a></li>
+          <li class="nav-item"><a class="nav-link" href="mali2.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="mali3.html">خدمات</a></li>
+          <li class="nav-item"><a class="nav-link" href="mali4.html">نمونه کار ها</a></li>
+          <li class="nav-item"><a class="nav-link" href="mali5.html">قیمت ها</a></li>
+          <li class="nav-item"><a class="nav-link" href="mali6.html">تیم ما</a></li>
+         <li class="nav-item"><a class="nav-link" href="mali7.html">مقاله </a></li>
+          <li class="nav-item"><a class="nav-link " href="mali9.html">مقاله تگ</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#">تماس با ما</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg" data-parallax="true">
+    <div class="container">
+      <div class="hero-content glass fade-up inview" style="padding:28px;">
+        <h1 class="hero-title">تماس با ما — فروشگاه انار کو</h1>
+        <p class="hero-sub">
+          <span class="typewriter">ما اینجا هستیم تا به سفارشات، سوالات و نیازهای شما رسیدگی کنیم — پیام‌تان را ارسال کنید، یا مستقیماً با ما تماس بگیرید.</span>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section fade-up inview hovable">
+      <div class="glass contact-description" style="padding:22px 26px;">
+        <h2>درباره انار کو</h2>
+        <p class="subtitle">
+          فروشگاه انار کو، عرضه‌کننده تازه‌ترین محصولات اناری، مرباها، آبمیوه‌ها و محصولات ارگانیک مرتبط است. کیفیت، سلامت و رضایت مشتریان اولویت اصلی ماست. اگر درباره کیفیت محصول، بسته‌بندی یا ارسال سوالی دارید، تیم ما آماده کمک است.
+        </p>
+      </div>
+    </section>
+
+    <section class="section fade-up inview hovable">
+      <h2>راه‌های ارتباطی ما</h2>
+      <div class="info-grid">
+        <div class="info-card"><i class="fa-solid fa-location-dot"></i><div class="meta">آدرس ما<small>کابل، جاده دارالامان، نزدیک پل سرخ</small></div></div>
+        <div class="info-card"><i class="fa-solid fa-phone"></i><div class="meta">شماره تماس<small>+93 79 000 0000</small></div></div>
+        <div class="info-card"><i class="fa-solid fa-envelope"></i><div class="meta">ایمیل<small>info@anarko.com</small></div></div>
+        <div class="info-card"><i class="fa-solid fa-clock"></i><div class="meta">ساعت کاری<small>۸ صبح تا ۹ شب</small></div></div>
+      </div>
+    </section>
+
+    <section class="section fade-up inview">
+      <div class="form-map">
+        <div class="contact-form glass fade-up inview">
+          <h2>فرم تماس سریع</h2>
+          <form id="contactForm" autocomplete="on">
+            <input class="form-control" type="text" name="name" placeholder="نام و نام خانوادگی" required>
+            <input class="form-control" type="email" name="email" placeholder="ایمیل" required>
+            <input class="form-control" type="text" name="subject" placeholder="موضوع" required>
+            <textarea class="form-control" name="message" placeholder="پیام شما" required></textarea>
+            <button type="submit" class="btn-anari">ارسال پیام</button>
+          </form>
+        </div>
+
+        <div class="map-box glass fade-up inview">
+          <div style="width:100%;height:100%;min-height:420px;overflow:hidden;border-radius:12px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999674216346!2d69.195515!3d34.555349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d1d59c567f0d33%3A0x123456789abcdef!2sKabul%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1698783900000!5m2!1sen!2s" style="border:0;width:100%;height:100%;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 فروشگاه انار کو — تمامی حقوق محفوظ است.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const items = document.querySelectorAll('.fade-up');
+      items.forEach((el,i)=>{setTimeout(()=>el.classList.add('inview'), 120*i)});
+      const form = document.getElementById('contactForm');
+      form && form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        btn.disabled = true;
+        btn.textContent = 'در حال ارسال...';
+        setTimeout(()=>{
+          btn.textContent = 'ارسال شد ✅';
+          btn.style.background = 'linear-gradient(90deg,var(--anari),var(--anari-deep))';
+        },1000);
+      });
+    });
+  </script>
+
+</body>
+</html>

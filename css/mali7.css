@@ -1,0 +1,93 @@
+
+      @font-face{
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot");
+
+    src: url("../fonts/Vazir.eot?#iefix") format('embedded-opentype'),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff")format("woff") ,
+    url("../fonts/Vazir.ttf") format("truetype");
+}
+body { font-family: 'Vazir', sans-serif; background-color: #fff8f0; margin: 0; padding: 0; overflow-x: hidden;
+background: linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(255,230,230,0.85)); 
+}
+a { text-decoration: none; color: inherit; }
+
+/* Navbar */
+.bgnav { background-color: rgb(185, 38, 38); color: white; position: fixed; top:0; width: 100%; z-index: 1000; }
+.navbar a { color: white; font-weight: 600; }
+.navbar a:hover { background-color: rgba(255,255,255,0.2);color: white; border-radius: 5px; }
+/* body {
+  font-family: 'Vazir', sans-serif;
+  background: linear-gradient(to bottom, #fff5f5, #ffe5e5);
+  padding-top: 50px;
+} */
+img{
+    width: 100%;
+}
+
+/* عناوین */
+h2, .section-title {
+  color: #b71c1c;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+p.lead {
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* کارت نوع اول: عکس بالا متن پایین */
+.card-type1 {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+.card-type1:hover { transform: scale(1.05) rotate(-1deg); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+.card-type1 img { height:180px; object-fit:cover; transition: transform 0.5s; }
+.card-type1:hover img { transform: scale(1.1); }
+.card-type1 .card-body { text-align:center; }
+.card-type1 .card-title { color:#b71c1c; font-weight:bold; font-size:1.2rem; margin-bottom:10px; }
+.card-type1 .card-text { font-size:0.95rem; color:#444; line-height:1.4; }
+.card-type1 .btn-danger { margin:10px auto 0 auto; border-radius:50px; }
+
+/* کارت نوع دوم: عکس کنار متن */
+.card-type2 {
+  display: flex;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background:#fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin:10px;
+  transition: all 0.5s ease;
+}
+.card-type2:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 12px 20px rgba(0,0,0,0.2); }
+.card-type2 img { width:150px; object-fit:cover; transition: transform 0.5s; }
+.card-type2:hover img { transform: scale(1.1); }
+.card-type2 .card-body { padding:15px; display:flex; flex-direction:column; justify-content:center; }
+.card-type2 .card-title { color:#b71c1c; font-weight:bold; font-size:1.1rem; margin-bottom:10px; }
+.card-type2 .card-text { font-size:0.9rem; color:#444; line-height:1.4; }
+.card-type2 .btn-danger { align-self:flex-start; margin-top:10px; border-radius:50px; }
+
+.row.g-0 { margin:0; justify-content:center; }
+.row.g-0 > [class*="col-"] { padding:5px; display:flex; justify-content:center; }
+
+/* Footer */
+footer { background-color:#b32d2d; color:white; padding:30px 20px; text-align:center; }
+footer a { color:white; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+

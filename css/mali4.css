@@ -1,0 +1,210 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* فونت فارسی */
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot");
+    src: url("../fonts/Vazir.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/Vazir.woff2") format("woff2"),
+         url("../fonts/Vazir.woff") format("woff"),
+         url("../fonts/Vazir.ttf") format("truetype");
+}
+
+/* نوار ناوبری */
+.bgnav {
+    background-color: rgb(179, 40, 40);
+    color: white;
+}
+nav a, .nav-item a {
+    color: white;
+}
+.nav-item a:hover {
+    color: white;
+    background-color: rgba(255, 251, 251, 0.635);
+}
+.navbar a {
+    color: white;
+    font-weight: 600;
+}
+.navbar a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 5px;
+}
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* هدر اصلی (Hero) */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.199)),
+                url('./img/download (4).webp') top center / cover no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: floatText 6s ease-in-out infinite;
+}
+.hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: auto;
+    animation: floatText 8s ease-in-out infinite alternate;
+}
+.hero .btn {
+    margin-top: 25px;
+    font-size: 22px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    animation: pulseBtn 2s infinite;
+    transition: all 0.3s ease;
+}
+.hero .btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(205, 13, 13, 0.8);
+}
+
+/* انیمیشن‌های هدر */
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+@keyframes pulseBtn {
+    0% { transform: scale(1); box-shadow: 0 0 10px #ff6767; }
+    50% { transform: scale(1.1); box-shadow: 0 0 25px #ff6767; }
+    100% { transform: scale(1); box-shadow: 0 0 10px #ff6767; }
+}
+
+/* کارت محصولات */
+.product-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.product-img-wrapper img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.product-img-wrapper .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.product-img-wrapper:hover img {
+    transform: scale(1.2);
+}
+.product-img-wrapper:hover .overlay {
+    opacity: 1;
+}
+.card.product-card {
+    transition: transform 0.4s, box-shadow 0.4s;
+    border-radius: 12px;
+}
+.card.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(239, 90, 90, 0.7);
+}
+.overlay a {
+    text-decoration: none;
+}
+
+/* انیمیشن کارت‌های دسته‌ای */
+@keyframes fadeSlideScale {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.category-products .product-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeSlideScale 0.6s forwards;
+}
+.product-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 4px 8px 15px rgba(239,90,90,0.7);
+}
+
+/* بخش ویژگی‌ها */
+.features {
+    background-color: #fce5e1;
+    padding: 60px 20px;
+}
+.feature-item {
+    text-align: center;
+    padding: 20px;
+}
+.feature-item i {
+    font-size: 50px;
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+/* بخش نظرات */
+.reviews {
+    background-color: #fff0f5;
+    padding: 60px 20px;
+}
+.review-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.review-card:hover {
+    transform: translateY(-8px);
+}
+
+/* انیمیشن عمومی هنگام اسکرول */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* فوتر */
+footer {
+    background-color: #b32d2d;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

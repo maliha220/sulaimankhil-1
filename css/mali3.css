@@ -1,0 +1,218 @@
+
+/* تمام لینک‌ها هنگام هاور سفید می‌شوند */
+a:hover {
+  color: white !important;
+  text-decoration: none; /* اگر می‌خوای زیرخط هم نداشته باشد */
+}
+
+body { 
+    font-family:'Vazir', sans-serif; 
+    margin:0; 
+    padding:0; 
+    background:#fafaf9; 
+    overflow-x:hidden; /* جلوگیری از اسکرول افقی */
+}
+/* نوار */
+@font-face{
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot");
+
+    src: url("../fonts/Vazir.eot?#iefix") format('embedded-opentype'),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff")format("woff") ,
+    url("../fonts/Vazir.ttf") format("truetype");
+}
+    .bgnav{
+        background-color: rgb(179, 40, 40);
+        color: white;
+         position: fixed;
+          width: 100%;
+          z-index: 1;
+        
+    }
+   
+/* Navbar */
+
+.navbar a{
+    color:white;
+    font-weight:600;
+}
+.navbar a:hover{
+    background-color: rgba(255,255,255,0.2);
+    border-radius:5px;
+}
+.navbar-brand{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+}
+
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  background: url('./img/photo-1705950032634-1245a318939b.avif') center/cover no-repeat;
+  height: 400px; /* ارتفاع دلخواه */
+  width: 100%;
+   text-align:center; color:white;
+    padding:120px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* رنگ مشکی با شفافیت 50٪ */
+}
+
+.hero h1{ font-family:'Poppins',sans-serif; font-size:52px; animation: floatText 6s ease-in-out infinite;}
+.hero p{ font-size:26px; margin-top:15px; animation: floatText 8s ease-in-out infinite alternate;}
+@keyframes floatText{0%{transform:translateY(0);}50%{transform:translateY(-20px);}100%{transform:translateY(0);}}
+
+/* Section Titles */
+.section { padding:60px 20px; text-align:center; }
+.section h2 { font-family:'Poppins',sans-serif; margin-bottom:50px; font-weight:700; }
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Service Boxes */
+.service-box{
+    width:300px; 
+    margin:20px; 
+    padding:30px;
+    background:white; 
+    border-radius:20px; 
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.5s, box-shadow 0.5s;
+    animation: floatIcon 5s ease-in-out infinite;
+    display: inline-block;
+    vertical-align: top;
+}
+.service-box:hover{ transform: translateY(-15px) scale(1.05) rotate(-1deg); box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+.service-box i{ font-size:60px; color:#b84141; margin-bottom:20px; }
+.service-box h4{ font-weight:700; margin-bottom:15px; }
+.service-box p{ color:#555; font-size:15px; line-height:1.6; }
+.service-box ul{ text-align:right; margin-top:10px; padding-left:20px; }
+
+/* Float Animation */
+@keyframes floatIcon{
+    0% { transform: translateY(0px);}
+    25% { transform: translateY(-15px);}
+    50% { transform: translateY(0px);}
+    75% { transform: translateY(15px);}
+    100% { transform: translateY(0px);}
+}
+
+/* CTA Button */
+.cta-btn{
+    font-size:22px; padding:15px 50px; border-radius:50px; background:#b84141; color:white; margin-top:40px; animation: pulseBtn 2s infinite; text-decoration:none; display:inline-block;
+}
+.cta-btn:hover{ transform: scale(1.15); box-shadow:0 0 25px rgba(184,65,65,0.8);}
+@keyframes pulseBtn{0%{transform:scale(1);box-shadow:0 0 10px #520404;}50%{transform:scale(1.1);box-shadow:0 0 25px #ff6767;}100%{transform:scale(1);box-shadow:0 0 10px #ff6767;}}
+
+/* FAQ Accordion */
+.accordion-button:focus { box-shadow:none; }
+.accordion-button:not(.collapsed) { color:#fff; background:#ff1717ce; }
+.accordion-button { background:#f51d1de1; color:white; font-weight:600; }
+
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+  .service-box {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .service-box {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+}
+/* Footer */
+footer{
+   
+     background-color:#b32d2d;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+footer a{
+    color:white;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+
+
+
+
+
+  
+/* Hero Section */
+
+.hero {
+  position: relative;
+  background: url('./img/photo-1705950032634-1245a318939b.avif') center/cover no-repeat;
+  height: 400px; /* ارتفاع دلخواه */
+  width: 100%;
+   text-align:center; color:white;
+    padding:120px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* رنگ مشکی با شفافیت 50٪ */
+}
+
+.hero h1{ font-family:'Poppins',sans-serif; font-size:52px; animation: floatText 6s ease-in-out infinite;}
+.hero p{ font-size:26px; margin-top:15px; animation: floatText 8s ease-in-out infinite alternate;}
+@keyframes floatText{0%{transform:translateY(0);}50%{transform:translateY(-20px);}100%{transform:translateY(0);}}
+
+/* Section Titles */
+.section { padding:60px 20px; text-align:center; }
+.section h2 { font-family:'Poppins',sans-serif; margin-bottom:50px; font-weight:700; }
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* FAQ Accordion */
+.accordion-button:focus { box-shadow:none; }
+.accordion-button:not(.collapsed) { color:#fff; background:#ff1717ce; }
+.accordion-button { background:#f51d1de1; color:white; font-weight:600; }
+
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+  .service-box {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .service-box {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+}
+

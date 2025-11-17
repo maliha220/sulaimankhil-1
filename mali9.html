@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anar Co</title>
+<link rel="stylesheet" href="./css/mali9.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazir&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  
+  
+/* Navbar */
+/* Navbar */
+.bgnav{
+    background-color: rgb(179, 40, 40);
+    color: white;
+    width: 100%;
+    position: fixed; /* حتما اینجا قرار گیرد */
+    top: 0; /* چسبیده به بالای صفحه */
+    left: 0;
+    z-index: 1000; /* بالاتر از سایر عناصر */
+    height: 70px; /* ارتفاع مشخص */
+    line-height: 70px; /* وسط چین کردن متن عمودی */
+    padding: 0 20px;
+}
+
+/* فاصله محتوا از Navbar */
+body {
+    padding-top: 70px; /* همان ارتفاع Navbar */
+}
+
+.navbar a{
+    color:white;
+    font-weight:600;
+}
+.navbar a:hover{
+    background-color: rgba(255,255,255,0.2);
+    border-radius:5px;
+}
+.navbar-brand{
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+}
+.nav-link.active{
+    background-color: rgba(255,255,255,0.6);
+    color:black !important;
+    border-radius:5px;
+}
+
+@font-face{
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot");
+
+    src: url("../fonts/Vazir.eot?#iefix") format('embedded-opentype'),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff")format("woff") ,
+    url("../fonts/Vazir.ttf") format("truetype");
+}
+/* تمام لینک‌ها هنگام هاور سفید می‌شوند */
+a:hover {
+  color: white !important;
+  text-decoration: none; /* اگر می‌خوای زیرخط هم نداشته باشد */
+}
+
+
+
+/* Footer */
+footer{
+    background-color:#b32d2d;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+footer a{
+    color:white;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+:root{
+  --brand:#b30000;
+  --bg:linear-gradient(135deg,#fff7f7,#ffe5e5);
+  --card:#fff;
+  --highlight:#ffe5e5;
+  --text:#222;
+  --muted:#666;
+  --maxw:1200px;
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Tahoma',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* Container */
+.container{max-width:var(--maxw);margin:50px auto;padding:0 15px;}
+
+/* Text Section */
+.text-section{max-width:900px;margin:0 auto 50px;text-align:center;}
+.text-section h2{opacity:0; transform:translateY(-30px) scale(0.9); transition:0.8s ease; color:var(--brand);}
+.text-section p{margin-bottom:15px;font-size:1.1rem;line-height:1.7;opacity:0;transform:translateY(30px);transition:0.7s ease;}
+
+/* پاراگراف اول با بک‌گراند Gradient متحرک و Glow */
+.text-section p:first-child{
+font-weight:700;
+font-size:1.3rem;
+color:white;
+padding:15px;
+border-radius:12px;
+background:linear-gradient(270deg,#ff4d4d,#ff8080,#ff4d4d);
+background-size:600% 600%;
+animation: gradientAnim 6s ease infinite;
+box-shadow:0 0 15px rgba(255,77,77,0.6);
+}
+
+/* کارت‌ها */
+.cards{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;}
+.card{
+background:var(--card);
+border-radius:12px;
+width:calc(25% - 15px);
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+overflow:hidden;
+position:relative;
+transform:translateY(50px) scale(0.95);
+opacity:0;
+transition:0.6s ease-out, box-shadow 0.4s, transform 0.4s;
+}
+.card.visible{transform:translateY(0) scale(1);opacity:1;}
+.card:hover{transform:translateY(-8px) scale(1.05);box-shadow:0 12px 24px rgba(0,0,0,0.25);}
+.card:hover::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.05);pointer-events:none;}
+
+/* Card contents */
+.card img{width:100%;height:160px;object-fit:cover;}
+.card-body{padding:10px;}
+.card-title{font-weight:bold;color:var(--brand);margin-bottom:5px;font-size:1rem;}
+.price{margin-bottom:5px;}
+.old-price{text-decoration:line-through;color:var(--muted);margin-left:5px;}
+.discount{color:white;background:#e85f5f;padding:3px 6px;border-radius:6px;font-size:0.8rem;position:absolute;top:10px;right:10px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.order-btn{display:inline-block;margin-top:5px;background:var(--brand);padding:6px 10px;border-radius:6px;color:white;text-decoration:none;transition:0.3s;}
+.order-btn:hover
+
+/* ریسپانسیو */
+@media(max-width:1000px){.card{width:calc(33% - 15px);}}
+@media(max-width:750px){.card{width:calc(50% - 15px);}}
+@media(max-width:500px){.card{width:100%;}}
+
+/* انیمیشن Gradient */
+@keyframes gradientAnim{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.text-section {
+background: rgba(255, 255, 255, 0.08); /* شیشه‌ای نیمه شفاف */
+backdrop-filter: blur(12px); /* افکت بلور */
+border-radius: 30px;
+padding: 30px 25px;
+box-shadow: 0 8px 30px rgba(255, 77, 77, 0.3);
+position: relative;
+overflow: hidden;
+transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.text-section:hover {
+transform: translateY(-8px) scale(1.02);
+box-shadow: 0 16px 40px rgba(255, 77, 77, 0.6);
+}
+
+/* Glow و Gradient پاراگراف اول */
+.text-section p:first-child {
+font-weight: 700;
+font-size: 1.4rem;
+color: white;
+padding: 18px 25px;
+border-radius: 20px;
+background: linear-gradient(270deg, #ff4d4d, #ff8080, #ff4d4d);
+background-size: 600% 600%;
+animation: gradientAnim 6s ease infinite;
+box-shadow: 0 0 25px rgba(255,77,77,0.8), 0 0 50px rgba(255,128,128,0.5);
+text-align: center;
+position: relative;
+z-index: 2;
+}
+
+/* Particleهای کوچک پشت متن */
+.text-section::before {
+content: '';
+position: absolute;
+width: 150%;
+height: 150%;
+top: -25%;
+left: -25%;
+background: radial-gradient(circle, rgba(255,77,77,0.2) 2%, transparent 2%) repeat;
+background-size: 50px 50px;
+animation: moveParticles 20s linear infinite;
+z-index: 1;
+}
+
+/* انیمیشن Gradient */
+@keyframes gradientAnim {
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* حرکت Particle */
+@keyframes moveParticles {
+0% {transform: translate(0,0);}
+50% {transform: translate(50px,50px);}
+100% {transform: translate(0,0);}
+}
+
+/* انیمیشن هنگام اسکرول */
+.text-section.visible h2,
+.text-section.visible p {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+.text-section h2 {
+font-weight: 700;
+font-size: 2.2rem;
+color: #b30000;
+margin-bottom: 20px;
+text-align: center;
+opacity: 0;
+transform: translateY(-30px) scale(0.95);
+transition: 0.8s ease;
+}
+.text-section p {
+font-size: 1.1rem;
+line-height: 1.7;
+margin-bottom: 15px;
+opacity: 0;
+transform: translateY(30px);
+transition: 0.7s ease;
+}
+
+
+</style>
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bgnav" style="position: fixed;">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <img src="download.webp" alt="" style="width:50px;height:50px;border-radius:50px;">
+            Anar Co
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link " href="mali1.html">صفحه اصلی</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali2.html">درباره ما</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali3.html">خدمات</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali4.html">نمونه کار ها</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali5.html">قیمت ها</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali6.html">تیم ما</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali7.html">مقاله </a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="">مقاله تگ</a></li>
+                <li class="nav-item"><a class="nav-link" href="mali8.html">تماس با ما</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container ">
+  <div class="text-section  ">
+    <h2>تخفیف‌های ویژه فروشگاه انار کو</h2>
+    <p>بهترین فرصت برای خرید محصولات تازه و با کیفیت با قیمت‌های شگفت‌انگیز.</p>
+    <p>تخفیف‌ها شامل شربت‌ها، مرباها، آبمیوه‌ها و حتی محصولات خشک و شیرینی‌ها می‌شوند.</p>
+    <p>هر هفته پیشنهادات جدید و متنوع برای شما آماده می‌شود. فرصت را از دست ندهید!</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="discount">۲۴٪ تخفیف</div>
+      <img src="./photo1/hony.jpg" alt="شربت انار">
+      <div class="card-body">
+        <div class="card-title">عسل طبیعی و خالص، سرشار از آنتی‌اکسیدان، با طعم خوشمزه، آماده سفارش در فروشگاه ما.</div>
+        <div class="price"><span class="old-price">۷۶۰ افغانی</span> ۵۸۰ افغانی</div>
+        <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+      </div>
+    </div>
+
+
+<div class="card">
+  <div class="discount">۱۷٪ تخفیف</div>
+  <img src="./photo1/ric1.jpg" alt="">
+  <div class="card-body">
+    <div class="card-title">برنج باکیفیت و تازه، مناسب برای پخت انواع غذاها، آماده سفارش در فروشگاه ما.</div>
+    <div class="price"><span class="old-price">۱۵۰۰ افغانی</span> ۱۲۵۰ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="discount">۱۶٪ تخفیف</div>
+  <img src="./photo1/oil.jpg" alt="محصولات تازه">
+  <div class="card-body">
+    <div class="card-title">با کیفیت بالا و خالص، مناسب برای پخت و پز و سرخ‌کردن سالم برای مصرف روزانه</div>
+    <div class="price"><span class="old-price">۵۰۰ افغانی</span> ۴۲۰ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="discount">۱۰٪ تخفیف</div>
+  <img src="./photo1/flour1.jpg" alt="عسل طبیعی">
+  <div class="card-body">
+    <div class="card-title">تازه و با کیفیت، مناسب برای شیرینی‌پزی و آشپزی روزانه حالا در فروشگاه ما</div>
+    <div class="price"><span class="old-price">۲۱۰۰ افغانی</span> ۱۹۰۰ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="discount">۱۹٪ تخفیف</div>
+  <img src="./photo1/tea2.jpg" alt="آب انار">
+  <div class="card-body">
+    <div class="card-title">خوش‌طعم و معطر، مناسب برای نوشیدن روزانه و آرامش‌بخش.</div>
+    <div class="price"><span class="old-price">۷۰ افغانی</span> ۵۷ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="discount">۲۴٪ تخفیف</div>
+  <img src="./photo1/shrine.jpg" alt="">
+  <div class="card-body">
+    <div class="card-title">تازه و مقوی، شامل بادام، پسته، فندق و دیگر مغزیات</div>
+    <div class="price"><span class="old-price">۴۵۰ افغانی</span> ۳۴۰ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="discount">۳۰٪ تخفیف</div>
+  <img src="./photo1/macha1.jpg" alt="میوه خشک">
+  <div class="card-body">
+    <div class="card-title">ماچا – چای سبز پودری خالص، سرشار از آنتی‌اکسیدان.</div>
+    <div class="price"><span class="old-price">۴۵۰ افغانی</span> ۳۱۵ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="discount">۲۵٪ تخفیف</div>
+  <img src="./photo1/shampo.jpg" alt="شیرینی انار">
+  <div class="card-body">
+    <div class="card-title">با فرمولاسیون ملایم و مغذی، مناسب برای تقویت موها</div>
+    <div class="price"><span class="old-price">۵۰۰ افغانی</span> ۳۷۵ افغانی</div>
+    <a href="mali8.html" class="order-btn">سفارش آنلاین</a>
+  </div>
+</div>
+```
+
+  </div>
+</div>
+<!-- Footer -->
+<footer>
+    <p>© 2025 Anar Co. تمامی حقوق محفوظ است.</p>
+    <p>تماس با ما: <a href="mailto:info@anarco.com">info@anarco.com</a></p>
+</footer>
+<script>
+// انیمیشن کارت‌ها
+const cards = document.querySelectorAll('.card');
+function checkCards(){
+  const triggerBottom = window.innerHeight * 0.85;
+  cards.forEach((card,i)=>{
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom){ 
+      setTimeout(()=>{ card.classList.add('visible'); }, i*100);
+    }
+  });
+}
+window.addEventListener('scroll', checkCards);
+window.addEventListener('load', checkCards);
+
+// انیمیشن متن
+const texts = document.querySelectorAll('.text-section p, .text-section h2');
+function checkText(){
+  const triggerBottom = window.innerHeight * 0.85;
+  texts.forEach((text,i)=>{
+    const textTop = text.getBoundingClientRect().top;
+    if(textTop < triggerBottom){ 
+      setTimeout(()=>{
+        text.style.opacity='1';
+        text.style.transform='translateY(0) scale(1)';
+      }, i*150);
+    }
+  });
+}
+window.addEventListener('scroll', checkText);
+window.addEventListener('load', checkText);
+</script>
+
+</body>
+</html>
